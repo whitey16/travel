@@ -1,0 +1,96 @@
+/*locally hosted fonts*/
+@font-face { font-family: Quango; src: url('../fonts/nimavisual_quango/Quango.otf'); }
+
+
+
+/*base document styles*/
+html {
+  font-size: 14px;
+  /*font-family: 'Lora', serif;*/
+  font-family: 'Helvetica Neue', Helvetica;
+}
+.container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+p {
+  /*font-family: 'Lora', serif;*/
+  line-height: 1.5;
+}
+h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  /*font-weight: bold;*/
+}
+h4 {
+  font-size: 2.5rem;
+  font-family: Quango;
+}
+
+/*top nav bar*/
+header {
+  height: 3.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  /*background-color: #e8e8e8;*/
+  border-bottom: 1px solid #777777;
+  color: #777777;
+}
+header .container {
+  justify-content: space-between;
+  align-content: center;
+  width: 100%
+}
+header ul {
+  display: flex;
+}
+header a {
+  color: #777777;
+}
+header li:first-child {
+  margin-right: 1rem;
+}
+
+/*jumbotron*/
+.main-title {
+  background-image: url('../images/HK_peak_2.jpg');
+  background-size: cover;
+  font-family: Quango;
+  color: white;
+  padding: 2rem 0;
+  height: 30rem;
+  text-shadow: -1.5px -1.5px 0 #a80101,
+    1.5px -1.5px 0 #a80101,
+    1.5px -1.5px 0 #a80101,
+    1.5px 1.5px 0 #a80101;
+}
+.main-title .container {
+  flex-direction: column;
+}
+.main-title h1 {
+  font-size: 8rem;
+  /*margin-bottom: 0.5rem;*/
+  text-transform: uppercase;
+}
+
+/*first section of article text*/
+.article-block {
+  padding: 3rem 0;
+}
+.article-block .container {
+  flex-direction: column;
+}
+.text.container {
+  width: 75%;
+}
+.article-block span {
+  float: left;
+  width: 0.7em;
+  font-size: 400%;
+  line-height: 75%;
+  font-family: Quango;
+}
