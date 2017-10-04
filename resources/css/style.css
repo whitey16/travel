@@ -19,15 +19,29 @@ html {
 p {
   /*font-family: 'Lora', serif;*/
   line-height: 1.5;
+  font-size: 1.25rem;
+  color: #777777;
+  font-weight: 300;
 }
 h2 {
   font-size: 2rem;
   margin: 1rem 0;
+  font-family: Quango;
   /*font-weight: bold;*/
+}
+h3 {
+  margin: 2rem 0;
 }
 h4 {
   font-size: 2.5rem;
   font-family: Quango;
+}
+h5 {
+  font-weight: bold;
+}
+img {
+  width: 100%;
+  height: auto;
 }
 
 /*top nav bar*/
@@ -36,9 +50,12 @@ header {
   font-weight: bold;
   display: flex;
   align-items: center;
-  /*background-color: #e8e8e8;*/
+  z-index: 10;
+  background-color: white;
   border-bottom: 1px solid #777777;
   color: #777777;
+  position: fixed;
+  width: 100%;
 }
 header .container {
   justify-content: space-between;
@@ -54,10 +71,46 @@ header a {
 header li:first-child {
   margin-right: 1rem;
 }
+header h2 {
+  display: none;
+  margin: 0;
+  /*color: white;*/
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 #a80101,
+    1px -1px 0 #a80101,
+    1px -1px 0 #a80101,
+    1px 1px 0 #a80101;
+}
+
+/*menu dropdown on hover*/
+.menu {
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  width: 50%;
+  background-color: white;
+  top: 4rem;
+  left: 0.5rem;
+  padding: 1rem;
+  line-height: 1.65;
+  border: 1px solid #777777;
+  border-radius: 4px;
+  display: none;
+  opacity: 0.8;
+}
+.menu a:hover {
+  font-weight: 500;
+}
+
+/*page content moved down for navbar*/
+.page-content {
+  position: relative;
+  top: 49px;
+}
 
 /*jumbotron*/
 .main-title {
-  background-image: url('../images/HK_peak_2.jpg');
+  background-image: url('../images/HK_peak.jpg');
   background-size: cover;
   font-family: Quango;
   color: white;
@@ -93,4 +146,60 @@ header li:first-child {
   font-size: 400%;
   line-height: 75%;
   font-family: Quango;
+  color: black;
+}
+
+/*title explaination block*/
+.title-info {
+  position: relative;
+}
+.title-info::after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/HK_flag.png');
+    width: 100%;
+    height: 100%;
+    opacity : 0.3;
+    z-index: -1;
+    background-size: contain;
+    /*visibility: hidden;*/
+}
+.title-info .container {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+.title-info h3 {
+  font-size: 2rem;
+  font-family: Quango;
+}
+.title-info p {
+  color: black;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+/*image gallery*/
+.gallery {
+  padding: 3rem 0;
+  /*background-color: black;*/
+}
+.column {
+  width: 30%;
+}
+.gallery .container {
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.image-container {
+  width: 100%;
+  margin-bottom: 2rem;
+  opacity: 0.5;
+}
+#pool {
+  width: 211%;
 }
